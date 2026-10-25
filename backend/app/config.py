@@ -1,8 +1,11 @@
 import os
 from typing import List
-from dotenv import load_dotenv
 
-load_dotenv()
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
 
 class Settings:
     PROJECT_NAME: str = "Multimodal Construction Intelligence Platform"
